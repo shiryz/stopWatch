@@ -2,6 +2,8 @@
 
 This is your basic Stop Watch for everyday use!
 
+![Stopwatch mockup](https://github.com/shireenzoaby/stopWatch/blob/mockupToREADME/Stopwatch.png)
+
 Features include:
 - start
 - pause
