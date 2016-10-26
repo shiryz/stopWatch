@@ -1,4 +1,4 @@
-describe("Gilded Rose", function() {
+/*describe("Gilded Rose", function() {
   it("Normal item before sell date", function() {
     gildedRose = new GildedRose("normal", 10, 5);
     gildedRose.update_quality();
@@ -216,4 +216,4 @@ describe("Gilded Rose", function() {
   //   expect(gildedRose.quality).toBe(0);
   //   expect(gildedRose.sell_in).toBe(-11);
   // });
-});
+});*/
