@@ -1,13 +1,16 @@
+var d;
+var time = 0;
+
 function start(){
   console.log('START')
+  console.log(0)
+  d = new Date();
 }
 
 function stop(){
   console.log('STOP')
-}
-
-function pause(){
-  console.log('PAUSE')
+  time = d.getMilliseconds();
+  console.log(time);
 }
 
 function reset(){

@@ -1,9 +1,9 @@
-/*describe("Gilded Rose", function() {
-  it("Normal item before sell date", function() {
-    gildedRose = new GildedRose("normal", 10, 5);
-    gildedRose.update_quality();
-    expect(gildedRose.quality).toBe(4);
+describe("Stopwatch", function() {
+  it("Start function produces a number", function() {
+    expect(start()).toBeGreaterThan(0);
   });
+});
+  /*
 
   it("Normal item before sell date", function() {
     gildedRose = new GildedRose("normal", 5, 10);
