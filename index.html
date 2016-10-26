@@ -5,6 +5,9 @@
 <title>Stop Watch Texttest Fixture</title>
 
 <link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
 <script type="text/javascript" src="lib/jquery-1.7.1/jquery-1.7.1.js"></script>
 <script type="text/javascript" src="src/gilded_rose.js"></script>
 
@@ -14,7 +17,15 @@
 
 <div id="container">
   <h1>Stopwatch<h1>
-  <button type="button">Start!</button>   
+  <div id="innerContainer">
+    <div id="watch">00:00:00:00</div>
+      <div>
+        <button type="button">Start</button>
+        <button type="button">Stop</button>
+        <button type="button">Pause</button>
+        <button type="button">Clear</button>
+      </div>
+  </div>
 </div>
 </body>
 </html>
