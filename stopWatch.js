@@ -3,12 +3,13 @@ var startTime = 0;
 var stopTime = 0;
 var flag;
 
-function startTimer(){
+function startWatch(){
+
   clearInterval(flag);
   document.getElementById('watch').innerHTML = '00:00:00:00';
   console.log('START')
   d = new Date();
-  startTime= d.getTime();
+  startTime = d.getTime();
   flag = setInterval(function(){
     d = new Date();
     stopTime = d.getTime();
@@ -16,6 +17,9 @@ function startTimer(){
     document.getElementById('watch').innerHTML = rightFormat;
   },1);
 }
+
+// code for test:
+var testable = rightFormat;
 
 function stop(){
   clearInterval(flag);
@@ -28,7 +32,10 @@ function stop(){
 }
 
 function reset(){
-  console.log('RESET')
+  console.log('RESET');
+  clearInterval(flag);
+  startCount = 0;
+  document.getElementById('watch').innerHTML = '00:00:00:00'
 }
 
 function msToTime(duration) {
