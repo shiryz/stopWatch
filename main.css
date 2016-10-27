@@ -1,7 +1,4 @@
 #container{
-  //border-radius: 25px;
-  //border-style: solid;
-  //border-color: #000000;
   position: fixed;
   width: 350px;
   height: 200px;
@@ -31,4 +28,14 @@ button{
 
 body{
   background-color: #FFCC33;
+}
+
+#stopWatch{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+h1{
+  margin-top: 5px;
+  margin-bottom: 0px;
 }
