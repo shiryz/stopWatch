@@ -3,7 +3,7 @@ var startTime = 0;
 var stopTime = 0;
 var flag;
 
-function start(){
+function startTimer(){
   clearInterval(flag);
   document.getElementById('watch').innerHTML = '00:00:00:00';
   console.log('START')

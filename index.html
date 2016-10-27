@@ -2,7 +2,11 @@
 <html>
 <head>
 
-<title>Stop Watch Texttest Fixture</title>
+<title>Stop Watch</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.0.1.css">
 
 <link rel="stylesheet" type="text/css" href="main.css">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat">
@@ -13,14 +17,20 @@
 </head>
 <body>
 
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+<script type="text/javascript" src="stopWatch.js"></script>
+<script src="https://code.jquery.com/qunit/qunit-2.0.1.js"></script>
+<script src="./qUnit/test.js"></script>
+
 <div id="container">
-  <h1>Stopwatch<h1>
+  <h1 id="stopWatch">Stopwatch<h1>
   <div id="innerContainer">
     <div id="watch">00:00:00:00</div>
       <div>
-        <button type="button" onclick="start()">Start</button>
-        <button type="button" onclick="stop()">Stop</button>
-        <button type="button" onclick="reset()">Clear</button>
+        <button type="button" onclick="start()" id="startButton">Start</button>
+        <button type="button" onclick="stop()" id="stopButton">Stop</button>
+        <button type="button" onclick="reset()" id="clearButton">Clear</button>
       </div>
   </div>
 </div>
