@@ -18,6 +18,7 @@
     border-color: #000;
     height: 95px;
     padding-top: 5%;
+    background-color: #FF3344;
 }
 
 #watch{
@@ -26,4 +27,8 @@
 
 button{
   font-family: 'Montserrat';
+}
+
+body{
+  background-color: #FFCC33;
 }
