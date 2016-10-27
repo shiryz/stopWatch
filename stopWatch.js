@@ -2,33 +2,65 @@ var d ;
 var startTime = 0;
 var stopTime = 0;
 var flag;
+var startCount = 0;
+var stopPressTime = 0;
+var stopPressed= 0;
+var startPressed = 0;
+var tmp = 0 ;
 
 function start(){
-  clearInterval(flag);
-  document.getElementById('watch').innerHTML = '00:00:00:00';
-  console.log('START')
   d = new Date();
-  startTime= d.getTime();
-  flag = setInterval(function(){
+  //tmp = d.getTime() - startTime + stopTime;
+  clearInterval(flag);
+  startPressed = 1;
+  startCount++;
+  if(startCount === 1){
     d = new Date();
-    stopTime = d.getTime();
-    var rightFormat = msToTime(stopTime - startTime);
-    document.getElementById('watch').innerHTML = rightFormat;
+    startTime= d.getTime();
+    document.getElementById('watch').innerHTML = '00:00:00:00';
+  }
+  flag = setInterval(function(){
+   if(stopPressed === 1){
+    //  clearInterval(flag);
+  //     console.log('stop pressed')
+  //     console.log('stop press time in start',stopTime)
+  document.getElementById('watch').innerHTML = msToTime(tmp);
+      stopPressed = 0;
+      stopTime = d.getTime() + tmp;
+      return;
+   //
+    } else {
+      d = new Date();
+      stopTime = d.getTime() ;
+     }
+      // console.log('stop press time after if',stopTime)
+      var rightFormat = msToTime(stopTime - startTime);
+      document.getElementById('watch').innerHTML = rightFormat;
   },1);
+
+  console.log('tmp is: ',msToTime(tmp));
+  console.log('start is: ',msToTime(startTime));
+  console.log('stop is: ',msToTime(stopTime));
 }
 
 function stop(){
+  if(stopPressed === 1 || startPressed === 0){
+    return;
+  }
   clearInterval(flag);
   console.log('STOP')
   d = new Date();
   stopTime = d.getTime();
-  //console.log(time);
-  //var rightFormat = msToTime(stopTime - startTime);
-  //document.getElementById('watch').innerHTML = rightFormat;
+  console.log('stop press time in stop',stopTime)
+  stopPressed = 1;
+  tmp = stopTime - startTime;
 }
 
 function reset(){
   console.log('RESET')
+  clearInterval(flag);
+  startCount = 0 ;
+  document.getElementById('watch').innerHTML = '00:00:00:00';
 }
 
 function msToTime(duration) {
