@@ -1,5 +1,7 @@
-// Checking that the files and links are set up correctly to test:
+//Checking that the files and links are set up correctly to test:
+
 QUnit.test( "Initial test", function( assert ) {
+
   assert.ok( 1 == "1", "Passed!" );
 });
 
@@ -48,12 +50,3 @@ QUnit.test( "Test clear buttom function", function( assert ) {
     done();
   },500);
 });
-
-/*QUnit.test("Checking startTimer function", function(assert) {
-  var done = assert.async();
-  setTimeout(function(){
-    // assertion here
-    done;
-  }, milliseconds);
-
-});*/
