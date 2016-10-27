@@ -11,25 +11,35 @@
 
 #innerContainer{
     border-radius: 25px;
-    border-style: solid;
+    border-style: none;
     border-color: #000;
-    height: 95px;
+    height: 91px;
     padding-top: 5%;
-    background-color: #FF3344;
+    background-color: #FF2525;
+    color: #FFC857;
+    box-shadow: 0px 1px 8px #AD3224;
 }
 
 #watch{
   margin: 50%,50%,50%,50%;
   width: 40px;
-  margin-left: 80px;
+  height: 33px;
+  margin-left: 75px;
 }
 
 button{
   font-family: 'Montserrat', sans-serif;
+  background-color: #FFC857;
+  color: #FF2525;
+  width: 48px;
+  border-style: none;
+  border-radius: 50%;
+  box-shadow: 0px 1px 3px #AD3224;
+  outline: none;
 }
 
 body{
-  background-color: #FFCC33;
+  background-color: #FFC857;
 }
 
 #stopWatch{
@@ -40,4 +50,5 @@ body{
 h1{
   margin-top: 5px;
   margin-bottom: 0px;
+  color: #FF2525;
 }
