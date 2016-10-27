@@ -1,4 +1,4 @@
-QUnit.test( "Initial test", function( assert ) {
+/*QUnit.test( "Initial test", function( assert ) {
   assert.ok( 1 == "1", "Passed!" );
 });
 
@@ -20,4 +20,4 @@ QUnit.test( "Test for clear button", function( assert ) {
 QUnit.test( "Test for stopwatch title", function( assert ) {
   var actual = document.getElementById('stopWatch').innerHTML;
   assert.ok(actual === 'Stopwatch', "stopwatch title exists" );
-});
+});*/
