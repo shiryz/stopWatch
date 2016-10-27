@@ -1,46 +1,54 @@
 var d ;
 var startTime = 0;
-var stopTime = 0;
+var lapTime = 0;
 var flag;
+var startCount = 0;
+var stopPressTime = 0;
+var stopPressed= 0;
+var startPressed = 0;
+var tmp = 0 ;
 
 function startWatch(){
-
-  clearInterval(flag);
-  document.getElementById('watch').innerHTML = '00:00:00:00';
-  console.log('START')
   d = new Date();
-  startTime = d.getTime();
-  flag = setInterval(function(){
+  clearInterval(flag);
+  startPressed = 1;
+  startCount++;
+  console.log('some calculations: ', d.getTime() - startTime + lapTime);
+  if(startCount === 1){
     d = new Date();
-    stopTime = d.getTime();
-    var rightFormat = msToTime(stopTime - startTime);
+    startTime= d.getTime();
+    document.getElementById('watch').innerHTML = '00:00:00:00';
+  }
+  flag = setInterval(function(){
+    if(stopPressed === 1){
+      stopPressed = 0;
+      startTime=d.getTime();
+    }
+      d = new Date();
+    var rightFormat = msToTime(d.getTime() - startTime + lapTime);
     document.getElementById('watch').innerHTML = rightFormat;
   },1);
 }
 
-// code for test:
-var testable = rightFormat;
-
 function stop(){
+  if(stopPressed === 1 || startPressed === 0){
+    return;
+  }
   clearInterval(flag);
-  console.log('STOP')
   d = new Date();
-  stopTime = d.getTime();
-  //console.log(time);
-  //var rightFormat = msToTime(stopTime - startTime);
-  //document.getElementById('watch').innerHTML = rightFormat;
+  stopPressed = 1;
+  lapTime = d.getTime() + lapTime - startTime;
 }
 
 function reset(){
-  console.log('RESET');
   clearInterval(flag);
-  startCount = 0;
-  document.getElementById('watch').innerHTML = '00:00:00:00'
+  startCount = 0 ;
+  lapTime = 0; 
+  document.getElementById('watch').innerHTML = '00:00:00:00';
 }
 
 function msToTime(duration) {
       var x;
-      //x=Math.floor(duration%1000);
       var milli = ((duration % 1000) / 10).toFixed(0);
       x=Math.floor(duration/1000);
       var seconds = x % 60;
@@ -52,6 +60,5 @@ function msToTime(duration) {
       if(minutes < 10) minutes="0" + minutes;
       if(seconds < 10) seconds="0" + seconds;
       if(milli < 10) milli="0" + milli;
-
       return hours + ":" + minutes + ":" + seconds + ":" + milli ;
   }
