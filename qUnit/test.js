@@ -51,6 +51,32 @@ QUnit.test( "Test clear buttom function", function( assert ) {
   },500);
 });
 
+QUnit.test( "Test startCount variable", function( assert ) {
+  startWatch();
+  var done = assert.async();
+  window.setTimeout(function(){
+    var time = document.getElementById('watch').innerHTML;
+    stop();
+    reset();
+    var newTime = document.getElementById('watch').innerHTML;
+    assert.ok(startCount === 0, "startCount is equal to 0" );
+    done();
+  },500);
+});
+
+QUnit.test( "Test lapTime variable", function( assert ) {
+  startWatch();
+  var done = assert.async();
+  window.setTimeout(function(){
+    var time = document.getElementById('watch').innerHTML;
+    stop();
+    reset();
+    var newTime = document.getElementById('watch').innerHTML;
+    assert.ok(lapTime === 0, "lapTime is equal to 0" );
+    done();
+  },500);
+});
+
 QUnit.test( "Test stop buttom function", function( assert ) {
   startWatch();
   var done = assert.async();

@@ -42,7 +42,7 @@ function stop(){
 
 function reset(){
   clearInterval(flag);
-  startCount = 0 ;
+  startCount = 0;
   lapTime = 0;
   document.getElementById('watch').innerHTML = '00:00:00:00';
 }
