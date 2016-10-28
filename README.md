@@ -4,7 +4,7 @@ This is your basic Stop Watch for everyday use!
 
 ![Stopwatch mockup](https://github.com/shireenzoaby/stopWatch/blob/master/Assets/Stopwatch.png)
 
-#Features:
+#Features
 - start
 - pause
 - stop
