@@ -9,7 +9,16 @@ Features include:
 - pause
 - stop
 - continue
-- clear (after stop has been activated)
+- clear
 
-The watch includes a unique feature of 'hide' which stops the watch from updating
-the current time on the screen, but the stopwatch is continuing in the code.
+#Work plan
+
+- Design the page.
+- Add basic functionality to the start button.
+- Implement the right functionality to each button.
+
+Since our approach was TDD, we wrote tests to every step in our plan.
+
+#What's next?
+
+Future implementations would include a lap button.
