@@ -27,7 +27,7 @@ QUnit.test( "Test for stopwatch title", function( assert ) {
 });
 
 // Checking that the js timer function is working:
-QUnit.test( "Test for startButton function", function( assert ) {
+QUnit.test( "Test start button function", function( assert ) {
   var done = assert.async();
   startWatch();
   window.setTimeout(function(){
@@ -49,4 +49,16 @@ QUnit.test( "Test clear buttom function", function( assert ) {
     assert.ok(newTime === '00:00:00:00', "clear button resets to 00:00:00:00" );
     done();
   },500);
+});
+
+QUnit.test( "Test stop buttom function", function( assert ) {
+  startWatch();
+  var done = assert.async();
+  window.setTimeout(function(){
+    var time = document.getElementById('watch').innerHTML;
+    stop();
+    var newTime = document.getElementById('watch').innerHTML;
+    assert.ok(newTime === time, "stop button stops time at 00:00:00:50" );
+    done();
+  },450);
 });
