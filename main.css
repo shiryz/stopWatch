@@ -1,7 +1,4 @@
 #container{
-  //border-radius: 25px;
-  //border-style: solid;
-  //border-color: #000000;
   position: fixed;
   width: 350px;
   height: 200px;
@@ -9,21 +6,49 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   text-align: center;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
 }
 
 #innerContainer{
     border-radius: 25px;
-    border-style: solid;
+    border-style: none;
     border-color: #000;
-    height: 95px;
+    height: 91px;
     padding-top: 5%;
+    background-color: #FF2525;
+    color: #FFC857;
+    box-shadow: 0px 1px 8px #AD3224;
 }
 
 #watch{
   margin: 50%,50%,50%,50%;
+  width: 40px;
+  height: 33px;
+  margin-left: 75px;
 }
 
 button{
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
+  background-color: #FFC857;
+  color: #FF2525;
+  width: 48px;
+  border-style: none;
+  border-radius: 50%;
+  box-shadow: 0px 1px 3px #AD3224;
+  outline: none;
+}
+
+body{
+  background-color: #FFC857;
+}
+
+#stopWatch{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+h1{
+  margin-top: 5px;
+  margin-bottom: 0px;
+  color: #FF2525;
 }
