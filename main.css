@@ -38,11 +38,11 @@ button{
   outline: none;
   margin-left: 1px;
   margin-right: 1px;
+  cursor: pointer;
 }
 
 button:active {
   background-color: #ED8800;
-//  box-shadow: 0 5px #666;
   transform: translateY(1px);
 }
 
