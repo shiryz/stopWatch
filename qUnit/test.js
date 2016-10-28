@@ -60,5 +60,5 @@ QUnit.test( "Test stop buttom function", function( assert ) {
     var newTime = document.getElementById('watch').innerHTML;
     assert.ok(newTime === time, "stop button stops time at 00:00:00:50" );
     done();
-  },450);
+  },100);
 });

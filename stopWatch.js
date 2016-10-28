@@ -49,7 +49,7 @@ function reset(){
 
 function msToTime(duration) {
       var x;
-      var milli = ((duration % 1000) / 10).toFixed(0);
+      var milli = Math.floor(((duration % 1000) / 10));
       x=Math.floor(duration/1000);
       var seconds = x % 60;
       x=Math.floor(x/60);
